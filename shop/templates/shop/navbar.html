@@ -17,6 +17,7 @@
               Info
             </a>
             <div class="dropdown-menu">
+              <a class="dropdown-item" href="/shop/">전체</a>
               {% for c in categories %}
                 <a class="dropdown-item" href="{{c.get_absolute_url}}">{{c}}</a>
               {% endfor %}
