@@ -11,8 +11,17 @@
           <li class="nav-item active">
             <a class="nav-link" href="/">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/shop/">Shop</a>
+          <li class="nav-item dropdown">
+<!--            <a class="nav-link" href="/shop/">Info</a>-->
+            <a class="nav-link dropdown-toggle" href="/shop/" role="button" data-toggle="dropdown" aria-expanded="false">
+              Info
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="/shop/">교과</a>
+                <a class="dropdown-item" href="/shop/">비교과</a>
+                <a class="dropdown-item" href="/shop/">진로 및 취업</a>
+                <a class="dropdown-item" href="/shop/">깜짝 꿀팁</a>
+            </div>
           </li>
             {% if user.is_authenticated %}
               <li class="nav-item">
