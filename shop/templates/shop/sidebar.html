@@ -31,7 +31,7 @@
           <div class="card-header">Categories</div>
           <div class="card-body">
               <div class="row">
-                  <ul class="list-unstyled mb-0">
+                  <ul class="list-unstyled mb-0 ml-2">
                       {% for c in categories %}
                         <li><a href="{{c.get_absolute_url}}" class="text-dark">{{c}} ({{c.item_set.count}})</a></li>
                       {% endfor %}
@@ -39,18 +39,18 @@
               </div>
           </div>
         </div>
-        <div class="card mb-4" id="brand-card">
-            <div class="card-header">Brands</div>
-            <div class="card-body">
-                <div class="row">
-                    <ul class="list-unstyled mb-0">
-                        {% for b in brands %}
-                        <li><a href="{{b.get_absolute_url}}" class="text-dark">{{b}} ({{b.item_set.count}})</a></li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
-        </div>
+<!--        <div class="card mb-4" id="brand-card">-->
+<!--            <div class="card-header">Brands</div>-->
+<!--            <div class="card-body">-->
+<!--                <div class="row">-->
+<!--                    <ul class="list-unstyled mb-0">-->
+<!--                        {% for b in brands %}-->
+<!--                        <li><a href="{{b.get_absolute_url}}" class="text-dark">{{b}} ({{b.item_set.count}})</a></li>-->
+<!--                        {% endfor %}-->
+<!--                    </ul>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
 
         <!-- Categories widget
         <div class="card mb-4" style="width: 13rem;">

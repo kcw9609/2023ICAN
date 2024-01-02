@@ -11,9 +11,9 @@
                         <!-- Post header-->
                         <header class="mb-4">
 
-                            <span class="badge badge-secondary float-right">
-                                <p class="m-0">{{item.price}}₩</p>
-                            </span>
+<!--                            <span class="badge badge-secondary float-right">-->
+<!--                                <p class="m-0">{{item.price}}₩</p>-->
+<!--                            </span>-->
                             {% if item.category %}
                                 <span class="badge bg-secondary link-light float-right mr-1">
                                     <a href="{{item.category.get_absolute_url}}" class="text-decoration-none text-light">{{item.category}}</a>
@@ -29,17 +29,17 @@
                             {% if item.hook_text %}
                             <h5 class="text-muted">{{item.hook_text}}</h5>
                             {% endif %}
-                            {% if item.brand %}
-                            <p class="lead">
-                                by
-                                <a href="{{item.brand.get_absolute_url}}">{{item.brand}}</a>
-                            </p>
-                            {% else %}
-                            <p class="lead">
-                                by
-                                <a href="/shop/brand/no_brand">미분류</a>
-                            </p>
-                            {% endif %}<hr/>
+<!--                            {% if item.brand %}-->
+<!--                            <p class="lead">-->
+<!--                                by-->
+<!--                                <a href="{{item.brand.get_absolute_url}}">{{item.brand}}</a>-->
+<!--                            </p>-->
+<!--                            {% else %}-->
+<!--                            <p class="lead">-->
+<!--                                by-->
+<!--                                <a href="/shop/brand/no_brand">미분류</a>-->
+<!--                            </p>-->
+<!--                            {% endif %}<hr/>-->
                             <!-- Post meta content-->
                             {% if user.is_authenticated %}
                                 <div id="favourite-section" class="float-right">
@@ -61,12 +61,12 @@
                         {% if user.is_authenticated %}
                             {% if user.is_superuser or user.is_staff %}
                                 <a href="{% url 'delete_item' item.pk %}" role="button"
-                                    class="btn btn-info btn-sm float-right">
-                                    <i class="fa-solid fa-trash">Delete Item</i>
+                                    class="btn btn-info btn-sm float-right mb-2">
+                                    <i class="fa-solid fa-trash">Delete Post</i>
                                 </a>
                                 <a href="/shop/update_item/{{item.pk}}" role="button"
-                                    class="btn btn-info btn-sm float-right mr-1">
-                                    <i class="fas fa-pen">Edit Item</i>
+                                    class="btn btn-info btn-sm float-right mr-1 mb-2">
+                                    <i class="fas fa-pen">Edit Post</i>
                                 </a>
                             {% endif %}
                         {% endif %}
@@ -81,8 +81,8 @@
                         <!-- Post content-->
                         <section class="mb-5">
                             <p class="fs-5 mb-4">{{item.get_content_markdown | safe}}</p>
-                            <i class="fas fa-palette"></i><span> Color: {{item.color}}</span>
-                            <br>
+<!--                            <i class="fas fa-palette"></i><span> Color: {{item.color}}</span>-->
+<!--                            <br>-->
                             {% if item.tags.exists %}
                                 <i class="fas fa-tag"></i>
                                 {% for t in item.tags.iterator %}

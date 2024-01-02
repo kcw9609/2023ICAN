@@ -17,13 +17,13 @@
     <div class="container">
       <div class="row justify-content-between">
         <div class="col-lg-6 text-light">
-          <h1 class="mt-5">MUG - MYPAGE</h1>
-          <div class="card" style="width: 18rem;">
+<!--          <h1 class="mt-5">GUIDE - MYPAGE</h1>-->
+          <div class="card mt-5" style="width: 18rem;">
               <div class="card-body">
                   <h5 class="card-title text-dark">{{user.username | upper}}</h5>
                   <h6 class="card-subtitle mb-2 text-muted">email: {{user.email}}</h6>
-                  <p class="card-text text-dark">MUG에서 {{user.username}}님의 취향을 담아보세요.</p>
-                  <a href="/shop/" class="card-link">상품 보러가기</a>
+                  <p class="card-text text-dark">GUIDE에서 {{user.username}}님의 정보를 담아보세요.</p>
+                  <a href="/shop/" class="card-link">가이드 보러가기</a>
               </div>
           </div>
 
@@ -98,7 +98,7 @@
         </div>
 
         <div class="col-lg-5 mt-5">
-          <h2 class="text-light">{{user.username | upper}} - Liked items</h2>
+          <h2 class="text-light">{{user.username | upper}} - Liked posts</h2>
           {% for item in favourite_items %}
           <div class="card mt-1">
             <a href="{{item.get_absolute_url}}">

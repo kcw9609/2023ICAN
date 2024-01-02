@@ -4,12 +4,12 @@
         {% if user.is_authenticated %}
             {% if user.is_superuser or user.is_staff %}
             <a href="/shop/create_item/" role="button"
-               class="btn btn-info btn-sm float-right mt-2">
+               class="btn btn-info btn-sm float-right mt-3">
                 <i class="fas fa-pen"></i> New Item
             </a>
             {% endif %}
         {% endif %}
-        <h2>Shop
+        <h2 class="mt-2">Info
             {% if search_info %}
                 - <span class="badge badge-secondary">{{ search_info }}</span>
             {% endif %}
@@ -46,9 +46,9 @@
                     <a href="/shop/category/no_category">미분류</a>
                 </span>
               {% endif %}
-              <span class="badge badge-secondary float-right">
-                <p class="m-0">{{p.price}}₩</p>
-              </span>
+<!--              <span class="badge badge-secondary float-right mr-2">-->
+<!--                <p class="m-0">{{p.price}}₩</p>-->
+<!--              </span>-->
               <h2 class="card-title">{{p.title | upper}}</h2>
               {% if p.hook_text %}
               <h5 class="text-muted">{{p.hook_text}}</h5>
@@ -68,11 +68,11 @@
             <div class="card-footer">
                 <div class="small text-muted">{{p.created_at | date:"Y-m-d h:m:s"}}</div>
                 <a href="#">{{p.author | upper}}</a>
-                {% if p.brand %}
-                    <a href="{{p.brand.get_absolute_url}}">{{p.brand | upper}}</a>
-                {% else %}
-                    <a href="/shop/brand/no_brand">미분류</a>
-                {% endif %}
+<!--                {% if p.brand %}-->
+<!--                    <a href="{{p.brand.get_absolute_url}}">{{p.brand | upper}}</a>-->
+<!--                {% else %}-->
+<!--                    <a href="/shop/brand/no_brand">미분류</a>-->
+<!--                {% endif %}-->
             </div>
         </div>
         {% endfor %}
